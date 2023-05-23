@@ -102,8 +102,8 @@ console.log("La réponse est " + reponse);
  * la 1ère instruction suivante du if (condition), c'est-à-dire reponse = 42;
  * n'est PAS executée. Donc le code affichait encore "La réponse est toujours 1337".
  */
-let reponse = 1337;
-let condition = false;
+reponse = 1337;
+condition = false;
 
 if (condition) {
   reponse = 42;

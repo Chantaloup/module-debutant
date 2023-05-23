@@ -11,7 +11,7 @@
  * Ensuite on concatène l'unité de poids à la fin avec l'opérateur "+" et on
  * n'oublie pas l'espace devant kg ;-).
  */
-let poidsClient = prochainClient.mesurerPoids();
+poidsClient = prochainClient.mesurerPoids();
 console.log(poidsClient + " kg");
 
 // Exercice 1
@@ -22,7 +22,7 @@ console.log(poidsClient + " kg");
  * poidsClient avant de l'afficher ou l'on peut écrire directement :
  * console.log(prochainClient.mesurerPoids()).
  */
-let poidsClient = prochainClient.mesurerPoids();
+poidsClient = prochainClient.mesurerPoids();
 console.log(poidsClient);
 poidsClient = prochainClient.mesurerPoids();
 console.log(poidsClient);
@@ -47,7 +47,7 @@ console.log(poidsClient);
  *   poids ← lire le prochain poids
  * FIN TANT QUE
  */
-let poidsClient = prochainClient.mesurerPoids();
+poidsClient = prochainClient.mesurerPoids();
 while (poidsClient !== 0) {
   console.log(poidsClient);
   poidsClient = prochainClient.mesurerPoids();
@@ -96,7 +96,7 @@ console.log(nombreHeures + "h" + nombreMinutes);
  * Quand on compte à partir de 0 on compte de 0 à longueurGuirlande exclue
  * donc on utilise < longueurGuirlande. C'est une erreur classique :).
  */
-let ligne = "";
+ligne = "";
 for (let i = 0; i < longueurGuirlande; i = i + 1) {
   ligne = ligne + "*";
 }
@@ -110,7 +110,7 @@ console.log(ligne);
  * Puis on va changer le contenu du symbole à chaque tour de boucle.
  * Quand c'est une étoile on le remplace par une ampoule et vice-versa.
  */
-let ligne = "";
+ligne = "";
 let symbole = "*";
 for (let i = 0; i < longueurGuirlande; i = i + 1) {
   ligne = ligne + symbole;
@@ -129,7 +129,7 @@ console.log(ligne);
  * guirlande qui composera chaque ligne.
  * Les erreurs se sont glissées au niveau des valeurs dans les for(let ...).
  */
-let ligne = "";
+ligne = "";
 for (let longueurLigne = largeurTriangle; longueurLigne > 0; longueurLigne = longueurLigne - 2) {
   // On construit la ligne à afficher
   for (let position = 0; position < longueurLigne; position = position + 1) {

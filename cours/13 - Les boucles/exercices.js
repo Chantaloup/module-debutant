@@ -37,8 +37,8 @@ function exercice0(prochainClient) { // Ne supprimez/commentez pas cette ligne
   // prochain client. N'oubliez pas de mettre les parenthèses "()" à la fin de cette instruction !
 
   // Décommentez le code de Tom ci-dessous
-  // let poidsClient = prochainClient.mesurerPoids();
-  // console.log(poidsClient);
+  let poidsClient = prochainClient.mesurerPoids();
+  console.log(poidsClient + " kg");
 
   // <===== FIN DE VOTRE CODE CI-DESSUS =====>
 
@@ -50,9 +50,10 @@ function exercice1(prochainClient) { // Ne supprimez/commentez pas cette ligne
   // <===== VOTRE CODE ICI: Insérez/modifiez le code à partir d'ici =====>
 
   // Décommentez le code de Tom ci-dessous
-  // let poidsClient = prochainClient.mesurerPoids();
-  // console.log(poidsClient);
-  // console.log(poidsClient);
+  poidsClient = prochainClient.mesurerPoids();
+  console.log(poidsClient);
+  poidsClient = prochainClient.mesurerPoids();
+  console.log(poidsClient);
 
   // <===== FIN DE VOTRE CODE CI-DESSUS =====>
 
@@ -62,11 +63,12 @@ function exercice1(prochainClient) { // Ne supprimez/commentez pas cette ligne
 function exercice2(prochainClient) { // Ne supprimez/commentez pas cette ligne
 
   // <===== VOTRE CODE ICI: Insérez/modifiez le code à partir d'ici =====>
-
   // Décommentez le code de Tom ci-dessous
-  // let poidsClient = prochainClient.mesurerPoids();
-  // console.log(poidsClient);
-
+  poidsClient = prochainClient.mesurerPoids();
+  while (poidsClient !== 0) {    
+    console.log(poidsClient);
+    poidsClient = prochainClient.mesurerPoids();    
+  } 
   // <===== FIN DE VOTRE CODE CI-DESSUS =====>
 
 } // Ne supprimez pas cette accolade fermante
@@ -78,10 +80,25 @@ function exercice3(nombreDeTours) { // Ne supprimez/commentez pas cette ligne
   // Utilisez la variable nombreDeTours qui contient le nombre de tours à faire pour la file d'attente actuelle
 
   // Décommentez le code de Tom ci-dessous
-  // let duree = nombreDeTours * 12;
-  // let nombreHeures = 0;
-  // let nombreMinutes = 0;
-  // console.log(nombreHeures + "h" + nombreMinutes);
+  let duree = nombreDeTours * 12;
+  let nombreHeures = 0;
+  let nombreMinutes = 0;
+
+  while (duree >= 60) {
+    nombreHeures += 1;
+    duree -= 60;
+  }
+
+  nombreMinutes = duree;
+
+  if (nombreHeures < 10) {
+    nombreHeures = "0"+nombreHeures
+  }
+  if (nombreMinutes < 10) {
+    nombreMinutes = "0"+nombreMinutes
+  }
+   
+  console.log(nombreHeures + "h" + nombreMinutes);
 
   // <===== FIN DE VOTRE CODE CI-DESSUS =====>
 
@@ -94,8 +111,15 @@ function exercice4(longueurGuirlande) { // Ne supprimez/commentez pas cette lign
   // Utilisez la variable longueurGuirlande qui contient le nombre d'étoiles à afficher pour la guirlande
 
   // Décommentez le code de Tom ci-dessous
-  // let ligne = "";
-  // console.log(longueurGuirlande);
+  let ligne = "";
+  
+  for (let i = 0; i <longueurGuirlande; i++) {
+
+    ligne += "*";    
+    
+  }
+  
+  console.log(ligne);
 
   // <===== FIN DE VOTRE CODE CI-DESSUS =====>
 
@@ -108,8 +132,20 @@ function exercice5(longueurGuirlande) { // Ne supprimez/commentez pas cette lign
   // Utilisez la variable longueurGuirlande qui contient la longueur de la guirland à afficher
 
   // Décommentez le code de Tom ci-dessous
-  // let ligne = "";
-  // console.log(longueurGuirlande);
+  ligne = ""
+  let symbole = "*";  
+
+  for (i = 0; i < longueurGuirlande; i++) {
+
+    ligne = ligne + symbole;
+    if (symbole === "*") {
+      symbole = "o";
+    } else {
+      symbole = "*";
+    }
+    
+  }
+  console.log(ligne);
 
   // <===== FIN DE VOTRE CODE CI-DESSUS =====>
 
@@ -122,15 +158,15 @@ function exercice6(largeurTriangle) { // Ne supprimez/commentez pas cette ligne
   // Utilisez la variable largeurTriangle qui contient la largeur du triangle à afficher
 
   // Décommentez le code de Tom ci-dessous
-  // let ligne = "";
-  // for (let longueurLigne = largeurTriangle; longueurLigne > 0; longueurLigne = longueurLigne - 1) {
-  //   // On construit la ligne à afficher
-  //   for (let position = 1; position < longueurLigne; position = position + 1) {
-  //     ligne = ligne + "*";
-  //   }
-  //   console.log(ligne);
-  //   ligne = "";
-  // }
+  let ligne = "";
+  for (let longueurLigne = largeurTriangle; longueurLigne > 0; longueurLigne -= 2) {
+    // On construit la ligne à afficher
+    for (let position = 0; position < longueurLigne; position++) {
+      ligne += "*";
+    }
+    console.log(ligne);
+    ligne = "";
+  }
 
   // <===== FIN DE VOTRE CODE CI-DESSUS =====>
 
@@ -143,23 +179,23 @@ function exercice7(largeurTriangle) { // Ne supprimez/commentez pas cette ligne
   // Utilisez la variable largeurTriangle qui contient la largeur du triangle à afficher
 
   // Décommentez le code de Tom ci-dessous
-  // let ligne = "";
-  // for (let longueurLigne = 0; longueurLigne <= largeurTriangle; longueurLigne = longueurLigne + 2) {
-  //   // On construit la ligne à afficher
-  //   for (let position = 0; position < longueurLigne; position = position + 1) {
-  //     ligne = ligne + "*";
-  //   }
-  //   console.log(ligne);
-  //   ligne = "";
-  // }
-  // for (let longueurLigne = largeurTriangle - 1; longueurLigne > 0; longueurLigne = longueurLigne - 2) {
-  //   // On construit la ligne à afficher
-  //   for (let position = 0; position <= longueurLigne; position = position + 1) {
-  //     ligne = ligne + "*";
-  //   }
-  //   console.log(ligne);
-  //   ligne = "";
-  // }
+  ligne = "";
+  for (longueurLigne = 1; longueurLigne <= largeurTriangle; longueurLigne += 2) {
+    // On construit la ligne à afficher
+    for (position = 0; position < longueurLigne; position++) {
+      ligne += "*";
+    }
+    console.log(ligne);
+    ligne = "";
+  }
+  for (longueurLigne = largeurTriangle - 2; longueurLigne > 0; longueurLigne -= 2) {
+    // On construit la ligne à afficher
+    for (position = 0; position < longueurLigne; position++) {
+      ligne += "*";
+    }
+    console.log(ligne);
+    ligne = "";
+  }
 
   // <===== FIN DE VOTRE CODE CI-DESSUS =====>
 
@@ -172,16 +208,32 @@ function exercice8(prochainClient) { // Ne supprimez/commentez pas cette ligne
   // <===== VOTRE CODE ICI: Insérez/modifiez le code à partir d'ici =====>
 
   // Décommentez le code de Tom ci-dessous
-  // let poidsClient = prochainClient.mesurerPoids();
-  // let sommePoidsPourCeTour = 0;
-  // let nombreDeTours = 0;
-  // // Comment faire ma boucle ici ?
-  // if (nombreDeTours === 0 || nombreDeTours === 1) {
-  //   console.log(nombreDeTours + " tour");
-  // } else {
-  //   console.log(nombreDeTours + " tours");
-  // }
+poidsClient = prochainClient.mesurerPoids();
+sommePoidsPourCeTour = 0;
+nombreDeTours = 0;
+// Comment faire ma boucle ici ?
+while (poidsClient !== 0) {
+  sommePoidsPourCeTour = sommePoidsPourCeTour + poidsClient;
 
+if (sommePoidsPourCeTour > 500) {
+  nombreDeTours++;
+  sommePoidsPourCeTour = poidsClient;
+}
+
+poidsClient = prochainClient.mesurerPoids();
+
+}
+
+
+if (sommePoidsPourCeTour > 0) {
+  nombreDeTours++;  
+}
+  
+if (nombreDeTours === 0 || nombreDeTours === 1){
+  console.log(nombreDeTours + " tour");
+} else {
+  console.log(nombreDeTours + " tours");
+}
   // <===== FIN DE VOTRE CODE CI-DESSUS =====>
 
 } // Ne supprimez pas cette accolade fermante

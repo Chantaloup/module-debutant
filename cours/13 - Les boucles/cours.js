@@ -33,20 +33,20 @@ console.log("Ligne pour éviter que le débogueur saute à la fin du fichier..."
 // console.log("Ligne pour éviter que le débogueur saute à la fin du fichier...");
 
 // Boucle for
-// for (let compteur = 0; compteur < 3; compteur = compteur + 1) {
-//   console.log("compteur : " + compteur);
-//   console.log("Instruction de la boucle for");
-// }
+/*for (let compteur = 0; compteur < 3; compteur = compteur + 1) {
+  console.log("compteur : " + compteur);
+   console.log("Instruction de la boucle for");
+}
 
-// console.log("Ligne pour éviter que le débogueur saute à la fin du fichier...");
+console.log("Ligne pour éviter que le débogueur saute à la fin du fichier...");
 
-// On n'est pas obligé d'utiliser des nombres
-// let rireMoqueur = "Mouah";
-// while (rireMoqueur !== "Mouahahahahah") {
-//   rireMoqueur = rireMoqueur + "ah";
-// }
-// console.log(rireMoqueur);
+//On n'est pas obligé d'utiliser des nombres
+let rireMoqueur = "Mouah";
+while (rireMoqueur !== "Mouahahahahah") {
+  rireMoqueur = rireMoqueur + "ah";  
+}*/
 
-// console.log("Ligne pour éviter que le débogueur saute à la fin du fichier...");
+console.log(rireMoqueur);
+//console.log("Ligne pour éviter que le débogueur saute à la fin du fichier...");
 
 /* Comparaisons visuelles des boucles */
