@@ -4,9 +4,9 @@
 
 /* La boucle while (tant que) */
 let compteur = 0;
-while (compteur < 42) {
+while (compteur < 142) {
   console.log(compteur);
-  if (compteur > 18) {
+  if (compteur > 88) {
     break;
   }
   compteur = compteur + 10;
