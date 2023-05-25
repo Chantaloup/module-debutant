@@ -14,7 +14,7 @@ let finJourneeMinutes = 30;
 // calcul rdv début de rdv 16h30, fin de journee 20h, duree 400
 
 // Durée du RDV : 90 minutes
-for (let duree = 1; duree <= 120; duree = duree + 1) {
+for (let duree = 1; duree <= 120; duree++) {
   // ETAPE 1 : Calcul de la fin du RDV
   let finRdvHeures = debutRdvHeures;
   let finRdvMinutes = debutRdvMinutes + duree;
